@@ -7,6 +7,8 @@ LABEL org.label-schema.vcs-url="https://github.com/sameerdhoot/wolweb" \
 RUN mkdir /wolweb
 WORKDIR /wolweb
 
+ENV GO111MODULE=auto
+
 # Install Dependecies
 RUN apk update && apk upgrade && \
     apk add --no-cache git && \
